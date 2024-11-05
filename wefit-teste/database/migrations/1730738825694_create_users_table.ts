@@ -13,7 +13,7 @@ export default class extends BaseSchema {
       table.string('cpf').nullable().unique()
       table.string('cnpj').nullable().unique()
 
-      table.integer('role_id').notNullable().unsigned().references('roles.id')
+      table.integer('role_id').unsigned().notNullable().references('id').inTable('roles')
       table.string('mobile_phone').nullable()
       table.string('phone').nullable()
 

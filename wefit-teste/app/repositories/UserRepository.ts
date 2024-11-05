@@ -3,7 +3,7 @@ import UserRepositoryInterface from '../interfaces/UserRepositoryInterface.js'
 
 export default class UserRepository implements UserRepositoryInterface {
   async getAll(): Promise<any> {
-    return await User.all()
+    return await User.query().preload('role').orderBy('createdAt', 'desc')
   }
 
   async createUser(newUser: {}): Promise<boolean> {

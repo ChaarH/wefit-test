@@ -1,15 +1,16 @@
-import User from '#models/user'
 import { test } from '@japa/runner'
+import UserDto from '../../../app/dtos/user.js'
+import { DateTime } from 'luxon'
 
 test.group('Users create', () => {
   test('create a new user', async ({ client }) => {
-    const user: User = {
+    const user: UserDto = {
       id: 1,
       fullName: 'Carlos Henrioque de Carvalho Aires',
-      email: 'carlos.teste2@gmail.com',
+      email: 'carlos.teste1@gmail.com',
       roleId: 1,
       password: '86462746598',
-      cpf: '01234567891',
+      cpf: '09762918091',
       cnpj: '',
       mobilePhone: '35992663351',
       phone: '33322965',
@@ -23,6 +24,8 @@ test.group('Users create', () => {
       publicArea: 'Fundos',
       addressNumber: '100',
       district: 'Centro',
+      createdAt: DateTime.now(),
+      updatedAt: DateTime.now(),
     }
 
     const response = await client.post('/users').json(user)
