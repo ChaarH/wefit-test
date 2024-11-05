@@ -25,7 +25,8 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd ../wefit-teste
+    - run: cd ./wefit-teste
+    - run: ls -la
     - run: npm install
     - run: ls -la
     - run: node ace migration:run
