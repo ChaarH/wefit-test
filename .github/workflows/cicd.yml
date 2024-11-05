@@ -27,4 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: ls -la
     - run: cd ./wefit-teste
-    - run: npm install && node ace migration:run && node ace db:seed && node ace test
+    - run: npm install
+    - run: node ace migration:run
+    - run: node ace db:seed
+    - run: node ace test
