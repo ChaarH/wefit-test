@@ -14,6 +14,19 @@ o docker-compose vai criar um container de um MySQL e você poderá acessar via 
     ou
     yarn start
 
-Depois que concluir seu teste não de enviar o seu código junto a pasta data, nela está salvo o volume do MySQL criado pelo docker.
+### Para iniciar o servidor express basta executar o seguinte comando:
 
-Boa sorte =)
+    cd wefit-teste
+    npm run dev
+
+### Para rodar as migrations use o seguinte comando:
+
+    node ace migration:run
+
+### Para popular o banco de dados com as ROLES iniciais, use o seguinte comando:
+
+    node ace db:seed
+
+### Para acessar a documentação, use a seguinte rota:
+
+    http://localhost:3333/docs

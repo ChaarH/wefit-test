@@ -10,6 +10,7 @@ o docker-compose vai criar um container de um MySQL e você poderá acessar via 
 
 ### Para iniciar o servidor express basta executar o seguinte comando:
 
+    cd wefit-teste
     npm run dev
 
 ### Para rodar as migrations use o seguinte comando:
