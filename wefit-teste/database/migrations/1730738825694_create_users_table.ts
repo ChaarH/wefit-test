@@ -10,8 +10,8 @@ export default class extends BaseSchema {
       table.string('email', 254).notNullable().unique()
       table.string('password').notNullable()
 
-      table.string('cpf').nullable().unique()
-      table.string('cnpj').nullable().unique()
+      table.string('cpf').nullable()
+      table.string('cnpj').nullable()
 
       table.integer('role_id').unsigned().notNullable().references('id').inTable('roles')
       table.string('mobile_phone').nullable()

@@ -6,7 +6,7 @@ test.group('Users create', () => {
   test('create a new user', async ({ client }) => {
     const user: UserDto = {
       id: 1,
-      fullName: 'Carlos Henrioque de Carvalho Aires',
+      fullName: 'Carlos Henrique de Carvalho Aires',
       email: 'carlos.teste1@gmail.com',
       roleId: 1,
       password: '86462746598',

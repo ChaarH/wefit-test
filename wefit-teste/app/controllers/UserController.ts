@@ -11,9 +11,10 @@ export default class UsersController {
     this.userRepository = userRepository
   }
 
-  async getAll({ response }: HttpContext) {
+  async getAll({ request, response }: HttpContext) {
     try {
-      const users = await this.userRepository.getAll()
+      const page = request.input('page', 1)
+      const users = await this.userRepository.getAll(page)
 
       if (!users) {
         throw new Error('Não foi possível carregar os registros!')

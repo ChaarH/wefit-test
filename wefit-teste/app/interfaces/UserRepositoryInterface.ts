@@ -1,6 +1,6 @@
 import User from '#models/user'
 
 export default interface UserRepositoryInterface {
-  getAll(): Promise<User>
+  getAll(page: number): Promise<User>
   createUser(newUser: {}): Promise<boolean>
 }

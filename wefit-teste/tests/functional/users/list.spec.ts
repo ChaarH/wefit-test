@@ -6,12 +6,14 @@ test.group('Users list', () => {
 
     response.assertStatus(200)
     response.assertBodyContains({
-      data: [
-        {
-          id: 1,
-          email: 'carlos.wecode@gmail.com',
-        },
-      ],
+      data: {
+        data: [
+          {
+            id: 1,
+            email: 'carlos.wecode@gmail.com',
+          },
+        ],
+      },
     })
   })
 })

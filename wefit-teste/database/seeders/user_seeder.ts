@@ -2,12 +2,13 @@ import User from '#models/user'
 import { BaseSeeder } from '@adonisjs/lucid/seeders'
 import UserDto from '../../app/dtos/user.js'
 import { DateTime } from 'luxon'
+import { UserFactory } from '#database/factories/user_factory'
 
 export default class UserSeeder extends BaseSeeder {
   async run() {
     const user: UserDto = {
       id: 1,
-      fullName: 'Carlos Henrioque de Carvalho Aires',
+      fullName: 'Carlos Henrique de Carvalho Aires',
       email: 'carlos.wecode@gmail.com',
       roleId: 1,
       password: '1212212',
@@ -30,5 +31,6 @@ export default class UserSeeder extends BaseSeeder {
     }
 
     await User.create(user)
+    await UserFactory.createMany(20)
   }
 }
