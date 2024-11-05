@@ -28,6 +28,7 @@ jobs:
     - run: ls -la
     - run: cd ./wefit-teste
     - run: npm install
+    - run: ls -la
     - run: node ace migration:run
     - run: node ace db:seed
     - run: node ace test
